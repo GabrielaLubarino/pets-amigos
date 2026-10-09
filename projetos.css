@@ -1,0 +1,375 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 24px;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(242, 246, 251);
+    color: rgb(35, 48, 63);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.pularConteudo {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 10;
+    padding: 10px 16px;
+    transform: translateY(-160%);
+    border-radius: 8px;
+    background-color: rgb(255, 230, 140);
+    color: rgb(35, 48, 63);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.pularConteudo:focus {
+    transform: translateY(0);
+}
+
+/* Link de acessibilidade que permite pular diretamente para o conteúdo principal,
+   O translateY(-160%) desloca o link para cima, escondendo-o inicialmente.
+   Quando recebe foco pelo teclado, o seletor :focus aplica translateY(0),
+   fazendo o link voltar à ficar visível, esse eu precisei pesquisar pra fazer. */
+
+header {
+    padding: 10px 20px;
+    background-color: rgb(31, 62, 96);
+    color: white;
+    text-align: center;
+}
+
+header p {
+    margin: 0;
+    font-weight: 700;
+}
+
+
+/* Reaproveitado tbm*/
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 8px 20px;
+    background-color: white;
+    border-bottom: 1px solid rgb(220, 226, 233);
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    color: rgb(35, 48, 63);
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: rgb(222, 235, 248);
+    color: rgb(31, 62, 96);
+}
+
+/* Botão Quero ajudar */
+
+nav a.botaoAjudar {
+    margin-left: auto;
+    padding: 10px 20px;
+    border: 2px solid rgb(31, 62, 96);
+    border-radius: 999px;
+    background-color: rgb(31, 62, 96);
+    color: white;
+}
+
+nav a.botaoAjudar:hover {
+    background-color: rgb(48, 91, 140);
+    border-color: rgb(48, 91, 140);
+    color: white;
+}
+
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgb(190, 115, 0);
+    outline-offset: 4px;
+}
+
+header nav a:focus-visible,
+footer a:focus-visible {
+    outline-color: rgb(255, 230, 140);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 90%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 40px 0 64px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, serif;
+    line-height: 1.25;
+}
+
+h1 {
+    margin: 12px 0 20px;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+}
+
+h2 {
+    margin-top: 0;
+    color: rgb(31, 62, 96);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+h3 {
+    margin-top: 0;
+    color: rgb(31, 62, 96);
+    font-size: 1.35rem;
+}
+
+p {
+    margin-top: 0;
+}
+
+.introducaoProjetos {
+    padding: clamp(28px, 6vw, 68px);
+    border-radius: 24px;
+    background-color: rgb(31, 62, 96);
+    color: rgb(255, 255, 255);
+}
+
+.introducaoProjetos .destaque,
+.etapasProjeto .destaque {
+    margin-bottom: 8px;
+    color: rgb(48, 91, 140);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.introducaoProjetos .destaque {
+    color: rgb(255, 230, 140);
+}
+
+.introducaoProjetos h1 {
+    color: rgb(255, 255, 255);
+}
+
+.textoIntroducao {
+    max-width: 700px;
+    margin-bottom: 0;
+}
+
+.listaProjetos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.tituloSecao {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+.cartaoProjeto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px;
+    border: 1px solid rgb(214, 225, 237);
+    border-radius: 18px;
+    background-color: rgb(255, 255, 255);
+}
+
+.cartaoProjeto h3 {
+    margin-bottom: 12px;
+}
+
+.cartaoProjeto p {
+    color: rgb(65, 78, 92);
+}
+
+.imagemProjeto {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 14px;
+    margin-top: auto;
+}
+
+.etapasProjeto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: clamp(24px, 5vw, 48px);
+    border-radius: 24px;
+    background-color: rgb(222, 235, 248);
+}
+
+.etapasProjeto .destaque {
+    margin-bottom: 0;
+}
+
+.etapasProjeto h2 {
+    margin-bottom: 0;
+}
+
+.descricaoEtapas {
+    max-width: 850px;
+    margin-bottom: 12px;
+    color: rgb(35, 48, 63);
+}
+
+.listaEtapas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.cartaoEtapa {
+    padding: 24px;
+    border-radius: 16px;
+    background-color: rgb(255, 255, 255);
+}
+
+.cartaoEtapa h3 {
+    margin-bottom: 12px;
+}
+
+.cartaoEtapa p {
+    margin-bottom: 0;
+    color: rgb(65, 78, 92);
+}
+
+.apoioProjetos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+}
+
+.cartaoApoio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: clamp(24px, 4vw, 36px);
+    border-radius: 20px;
+}
+
+.cartaoApoio h2 {
+    margin-bottom: 0;
+}
+
+.cartaoApoio p {
+    flex-grow: 1;
+    margin-bottom: 8px;
+}
+
+.cartaoVoluntariado {
+    background-color: rgb(222, 235, 248);
+}
+
+.cartaoDoacao {
+    background-color: rgb(250, 225, 233);
+}
+
+.cartaoDoacao h2 {
+    color: rgb(135, 43, 76);
+}
+
+.imagemRacao {
+    width: 100%;
+    max-height: 240px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 14px;
+}
+
+.linkAcao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    min-height: 46px;
+    padding: 10px 20px;
+    border-radius: 24px;
+    background-color: rgb(31, 62, 96);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+
+.linkAcao:hover {
+    background-color: rgb(48, 91, 140);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Rodapé*/
+
+footer {
+    margin-top: 36px;
+    padding: 28px 20px;
+    background-color: rgb(20, 42, 66);
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+footer p {
+    margin: 0 0 10px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+footer nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    background-color: transparent;
+    border: 0;
+    padding: 12px 0;
+}
+
+footer nav a {
+    min-height: 44px;
+    padding: 8px 12px;
+    color: rgb(255, 190, 50);
+    font-size: 15px;
+}
+
+footer nav a:hover {
+    background-color: rgb(48, 91, 140);
+    color: rgb(255, 255, 255);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgb(255, 190, 50);
+    outline-offset: 4px;
+} /*Navegar pelo teclado*/
