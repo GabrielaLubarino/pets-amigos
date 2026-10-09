@@ -65,9 +65,13 @@ Essas melhorias poderão ser incorporadas conforme a evolução dos estudos e do
 
 ## Uso de inteligência artificial
 
-Durante o desenvolvimento deste projeto, ferramentas de inteligência artificial foram utilizadas como apoio na elaboração e no aprimoramento de alguns textos e conteúdos descritivos.
+Durante o desenvolvimento deste projeto, ferramentas de inteligência artificial foram utilizadas como apoio na elaboração e no aprimoramento de textos e na criação das imagens utilizadas no site.
 
-Essas ferramentas foram utilizadas como recurso auxiliar, sem substituir o processo de estudo, desenvolvimento, revisão e compreensão das funcionalidades implementadas.
+Os conteúdos gerados foram incorporados como recursos auxiliares ao desenvolvimento acadêmico, sendo o projeto organizado e desenvolvido de forma incremental durante os estudos.
+
+As imagens que continham marcas-d'água foram mantidas com o objetivo de preservar os créditos e a identificação de suas respectivas fontes, sem a remoção dessas identificações.
+
+O uso dessas ferramentas é declarado por transparência, reconhecendo a inteligência artificial como parte dos recursos utilizados no processo de desenvolvimento.
 
 ## Aviso
 
