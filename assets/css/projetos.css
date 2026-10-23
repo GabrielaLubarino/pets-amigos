@@ -25,8 +25,8 @@ html {
 
 body {
     margin: 0;
-    background-color: rgb(242, 246, 251);
-    color: rgb(35, 48, 63);
+    background-color: var(--bg-neutral);
+    color: var(--text-main)
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.7;
@@ -40,8 +40,8 @@ body {
     padding: 10px 16px;
     transform: translateY(-160%);
     border-radius: 8px;
-    background-color: rgb(255, 230, 140);
-    color: rgb(35, 48, 63);
+    background-color: var(--accent-color);
+    color: var(--text-main);
     font-weight: 700;
     text-decoration: none;
 }
@@ -76,7 +76,7 @@ nav {
     gap: 6px;
     padding: 8px 20px;
     background-color: white;
-    border-bottom: 1px solid rgb(220, 226, 233);
+    border-bottom: 1px solid var(--border-color);
 }
 
 nav a {
@@ -86,14 +86,15 @@ nav a {
     min-height: 44px;
     padding: 8px 14px;
     border-radius: 999px;
-    color: rgb(35, 48, 63);
+    color: var(--text-main);
     font-weight: 700;
     text-decoration: none;
     text-align: center;
 }
 
 nav a:hover {
-    background-color: rgb(222, 235, 248);
+    background-color: var(--bg-soft-blue)
+    ;
     color:  var(--primary-color);
 }
 
@@ -108,8 +109,8 @@ nav a.botaoAjudar {
 }
 
 nav a.botaoAjudar:hover {
-    background-color: rgb(48, 91, 140);
-    border-color: rgb(48, 91, 140);
+    background-color:var(--secondary-color);
+    border-color: var(--secondary-color);
     color: white;
 }
 
@@ -125,7 +126,7 @@ textarea:focus-visible {
 
 header nav a:focus-visible,
 footer a:focus-visible {
-    outline-color: rgb(255, 230, 140);
+    outline-color: var(--accent-color);
 }
 
 main {
@@ -170,23 +171,23 @@ p {
     padding: clamp(28px, 6vw, 68px);
     border-radius: 24px;
     background-color:  var(--primary-color);
-    color: rgb(255, 255, 255);
+    color: var(--text-light);
 }
 
 .introducaoProjetos .destaque,
 .etapasProjeto .destaque {
     margin-bottom: 8px;
-    color: rgb(48, 91, 140);
+    color: var(--secondary-color);
     font-weight: 700;
     letter-spacing: 1px;
 }
 
 .introducaoProjetos .destaque {
-    color: rgb(255, 230, 140);
+    color: var(--accent-color);
 }
 
 .introducaoProjetos h1 {
-    color: rgb(255, 255, 255);
+    color: var(--text-light);
 }
 
 .textoIntroducao {
@@ -212,7 +213,8 @@ p {
     padding: 28px;
     border: 1px solid rgb(214, 225, 237);
     border-radius: 18px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--bg-card);
+
 }
 
 .cartaoProjeto h3 {
@@ -220,7 +222,7 @@ p {
 }
 
 .cartaoProjeto p {
-    color: rgb(65, 78, 92);
+    color: var(--text-main);
 }
 
 .imagemProjeto {
@@ -238,7 +240,7 @@ p {
     gap: 12px;
     padding: clamp(24px, 5vw, 48px);
     border-radius: 24px;
-    background-color: rgb(222, 235, 248);
+    background-color: var(--bg-soft-blue);
 }
 
 .etapasProjeto .destaque {
@@ -252,7 +254,7 @@ p {
 .descricaoEtapas {
     max-width: 850px;
     margin-bottom: 12px;
-    color: rgb(35, 48, 63);
+    color: var(--text-main);
 }
 
 .listaEtapas {
@@ -264,7 +266,7 @@ p {
 .cartaoEtapa {
     padding: 24px;
     border-radius: 16px;
-    background-color: rgb(255, 255, 255);
+    background-color: var( --bg-card);
 }
 
 .cartaoEtapa h3 {
@@ -273,7 +275,7 @@ p {
 
 .cartaoEtapa p {
     margin-bottom: 0;
-    color: rgb(65, 78, 92);
+    color: var(--text-main);
 }
 
 .apoioProjetos {
@@ -306,11 +308,11 @@ p {
 }
 
 .cartaoDoacao {
-    background-color: rgb(250, 225, 233);
+    background-color: var(--accent-pink-bg)
 }
 
 .cartaoDoacao h2 {
-    color: rgb(135, 43, 76);
+    color: var(--accent-pink-text);
 }
 
 .imagemRacao {
@@ -331,14 +333,14 @@ p {
     padding: 10px 20px;
     border-radius: 24px;
     background-color: var(--primary-color);
-    color: rgb(255, 255, 255);
+    color: var(--text-light);
     font-weight: 700;
     text-align: center;
     text-decoration: none;
 }
 
 .linkAcao:hover {
-    background-color: rgb(48, 91, 140);
+    background-color: var(--secondary-color);
     text-decoration: underline;
     text-underline-offset: 4px;
 }
@@ -348,14 +350,14 @@ p {
 footer {
     margin-top: 36px;
     padding: 28px 20px;
-    background-color: rgb(20, 42, 66);
-    color: rgb(255, 255, 255);
+    background-color: var(--bg-footer);
+    color:  var(--text-light);
     text-align: center;
 }
 
 footer p {
     margin: 0 0 10px;
-    color: rgb(255, 255, 255);
+    color: var(--text-light);
     font-size: 15px;
     line-height: 1.4;
 }
@@ -372,13 +374,13 @@ footer nav {
 footer nav a {
     min-height: 44px;
     padding: 8px 12px;
-    color: rgb(255, 190, 50);
+    color: var(--focus-color);
     font-size: 15px;
 }
 
 footer nav a:hover {
-    background-color: rgb(48, 91, 140);
-    color: rgb(255, 255, 255);
+    background-color: var(--secondary-color);
+    color: var(--text-light);
 }
 
 a:focus-visible,
@@ -386,6 +388,6 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-    outline: 3px solid rgb(255, 190, 50);
+    outline: 3px solid var(--focus-color);
     outline-offset: 4px;
 } /*Navegar pelo teclado*/
