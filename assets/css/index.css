@@ -120,8 +120,8 @@ nav a.botaoAjudar {
 }
 
 nav a.botaoAjudar:hover {
-    background-color: rgb(48, 91, 140);
-    border-color: rgb(48, 91, 140);
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
     color: rgb(255, 255, 255);
 }
 
@@ -228,7 +228,7 @@ main {
 .sobre {
     margin-top: 24px;
     padding: clamp(20px, 3vw, 36px); /*ajusta o espaçamento interno conforme o tamanho da tela// vw é viewport width, ou seja, a largura da tela*/
-    background-color: rgb(48, 91, 140);
+    background-color:var(--secondary-color);
     color: rgb(255, 255, 255);
     border-radius: 20px;
 }
@@ -316,7 +316,7 @@ footer nav a {
 }
 
 footer nav a:hover {
-    background-color: rgb(48, 91, 140);
+    background-color: var(--secondary-color);
     color: rgb(255, 255, 255);
 }
 
