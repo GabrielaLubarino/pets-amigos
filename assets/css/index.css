@@ -39,7 +39,7 @@ body {
     top: 12px;
     left: 12px;
     z-index: 10;
-    padding: 10px 16px;
+    padding: 8px 16px;
     transform: translateY(-160%);
     border-radius: 8px;
     background-color:var(--accent-color);
@@ -58,7 +58,7 @@ body {
 header {
     background-color: var(--primary-color);
     color:var(--text-light);
-    padding: 10px 20px;
+    padding: 8px 24px;
     text-align: center;
 }
 
@@ -76,8 +76,8 @@ nav {
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    gap: 6px;
-    padding: 8px 20px;
+    gap: 8px;
+    padding: 8px 24px;
     background-color: var(--bg-card);
     border-bottom: 1px solid var(--border-color);
 }
@@ -87,7 +87,7 @@ nav a {
     align-items: center;
     justify-content: center;
     min-height: 44px;
-    padding: 8px 14px;
+    padding: 8px 16px;
     border-radius: 999px;
     color: var(--text-main);
     font-size: 16px;
@@ -107,7 +107,7 @@ nav a:hover {
 nav a.botaoAjudar {
     margin-left: auto;
     min-height: 44px;
-    padding: 10px 20px;
+    padding: 8px 24px;
     border: 2px solid var(--primary-color);
     border-radius: 999px;
     background-color: var(--primary-color);
@@ -149,7 +149,7 @@ main {
     width: clamp(140px, 20vw, 200px);
     max-width: 100%;
     height: auto;
-    margin: 0 auto 20px;
+    margin: 0 auto 24px;
     object-fit: contain;
 }
 
@@ -162,7 +162,7 @@ main {
 }
 
 .destaque {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     color: var(--accent-color);
     font-size: 15px;
     font-weight: 800;
@@ -171,7 +171,7 @@ main {
 
 .bem-vindo h1 {
     max-width: 700px;
-    margin: 0 auto 20px;
+    margin: 0 auto 24px;
     color: var(--text-light);
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(30px, 4vw, 44px);
@@ -190,7 +190,7 @@ main {
 }
 
 .estilo h2 {
-    margin: 0 0 18px;
+    margin: 0 0 16px;
     color: var(--primary-color);
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(24px, 3vw, 32px);
@@ -199,7 +199,7 @@ main {
 
 .estilo p {
     max-width: 650px;
-    margin: 0 0 14px;
+    margin: 0 0 16px;
     color: var(--text-muted);
     font-size: 16px;
     line-height: 1.7;
@@ -209,7 +209,7 @@ main {
 .sectionHistoria {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 32px;
 }
 
 .sectionQuemSomos > div,
@@ -235,7 +235,7 @@ main {
 }
 
 .sobre h2 {
-    margin: 0 0 20px;
+    margin: 0 0 24px;
     color: var(--text-light);
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(24px, 3vw, 32px);/*Novamente clamp, ajusta o tamanho da letra conforme a tela, entre 24px e 32pxs*/
@@ -243,7 +243,7 @@ main {
 }
 
 .sobre h3 {
-    margin: 24px 0 10px;
+    margin: 24px 0 8px;
     color: var(--accent-color);
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(20px, 2.5vw, 24px);
@@ -252,7 +252,7 @@ main {
 
 .sobre p {
     max-width: 650px;
-    margin: 0 0 14px;
+    margin: 0 0 16px;
     color: var(--text-light);
     font-size: 16px;
     line-height: 1.4;
@@ -269,7 +269,7 @@ main {
 }
 
 .contato h2 {
-    margin: 0 0 18px;
+    margin: 0 0 16px;
     color: var(--accent-pink-text);
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(24px, 3vw, 32px);
@@ -277,7 +277,7 @@ main {
 }
 
 .contato p {
-    margin: 0 0 14px;
+    margin: 0 0 16px;
     color: var(--accent-pink-muted);
     font-size: 16px;
     line-height: 1.4;
@@ -287,14 +287,14 @@ main {
 
 footer {
     margin-top: 36px;
-    padding: 28px 20px;
+    padding: 24px 16px;
     background-color: var(--bg-footer);
     color: var(--text-light);
     text-align: center;
 }
 
 footer p {
-    margin: 0 0 10px;
+    margin: 0 0 8px;
     color: var(--text-light);
     font-size: 15px;
     line-height: 1.4;
@@ -303,15 +303,15 @@ footer p {
 footer nav {
     justify-content: center;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 8px;
     background-color: transparent;
     border: 0;
-    padding: 12px 0;
+    padding: 16px 0;
 }
 
 footer nav a {
     min-height: 44px;
-    padding: 8px 12px;
+    padding: 8px 16px;
     color: var(--focus-color);
     font-size: 15px;
 }
