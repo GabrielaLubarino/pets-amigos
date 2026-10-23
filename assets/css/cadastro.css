@@ -93,22 +93,6 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-/* Botão Quero ajudar */
-
-nav a.botaoAjudar {
-    margin-left: auto;
-    padding: 8px 24px;
-    border: 2px solid var(--primary-color);
-    border-radius: 999px;
-    background-color: var(--primary-color);
-    color: var(--text-light);
-}
-
-nav a.botaoAjudar:hover {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
-    color: var(--text-light);
-}
 
 /* acesibilidade: destacar os elementos quando a pessoa navega pelo site usando o teclado,*/
 
