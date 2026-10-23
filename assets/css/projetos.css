@@ -2,6 +2,23 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: rgb(31, 62, 96);
+    --secondary-color: rgb(48, 91, 140);
+    --bg-footer: rgb(20, 42, 66);
+    --bg-neutral: rgb(242, 246, 251);
+    --bg-card: rgb(255, 255, 255);
+    --bg-soft-blue: rgb(222, 235, 248);
+    --text-main: rgb(35, 48, 63);
+    --text-muted: rgb(65, 78, 92);
+    --text-light: rgb(255, 255, 255);
+    --accent-color: rgb(255, 230, 140);
+    --focus-color: rgb(255, 190, 50);
+    --accent-pink-bg: rgb(250, 225, 233);
+    --accent-pink-text: rgb(135, 43, 76);
+    --border-color: rgb(220, 226, 233);
+}
+
 html {
     scroll-padding-top: 24px;
 }
