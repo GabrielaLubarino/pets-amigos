@@ -97,7 +97,7 @@ nav a:hover {
 
 nav a.botaoAjudar {
     margin-left: auto;
-    padding: 10px 20px;
+    padding: 8px 24px;
     border: 2px solid var(--primary-color);
     border-radius: 999px;
     background-color: var(--primary-color);
@@ -133,10 +133,10 @@ textarea:focus-visible {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
     padding: 32px;
     background-color: var(--primary-color);
-    border-radius: 20px;
+    border-radius: 24px;
     color: var(--text-light);
 }
 
@@ -179,7 +179,7 @@ textarea:focus-visible {
     padding: 24px;
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
-    border-radius: 20px;
+    border-radius: 24px;
     box-shadow: 0 10px 30px rgba(48, 91, 140, 0.08);
 }
 
@@ -197,7 +197,7 @@ textarea:focus-visible {
 .formulario-cadastro fieldset {
     min-width: 0;
     margin: 0;
-    padding: 18px;
+    padding: 16px;
     border: 1px solid var(--border-fieldset);
     border-radius: 14px;
     background-color: var(--bg-neutral);
@@ -238,7 +238,7 @@ textarea:focus-visible {
     width: 100%;
     min-width: 0;
     min-height: 44px;
-    padding: 10px 12px;
+    padding: 8px 16px;
     border: 1px solid var(--border-input);
     border-radius: 8px;
     background-color: var(--bg-card);
@@ -296,7 +296,7 @@ textarea:focus-visible {
 .formulario-cadastro button {
     align-self: flex-start;
     min-height: 48px;
-    padding: 12px 28px;
+    padding: 16px 28px;
     border: 2px solid var(--primary-color);
     border-radius: 999px;
     background-color: var(--primary-color);
@@ -395,13 +395,12 @@ textarea:focus-visible {
 
 
 footer {
-    margin-top: 32px;
+    margin-top: 36px;
     padding: 24px 16px;
     background-color: var(--bg-footer);
     color: var(--text-light);
     text-align: center;
 }
-
 footer p {
     margin: 0 0 18px;
     color: var(--text-light);
