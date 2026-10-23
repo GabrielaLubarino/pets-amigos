@@ -78,7 +78,7 @@ nav {
     gap: 6px;
     padding: 8px 20px;
     background-color: var(--bg-card);
-    border-bottom: 1px solid rgb(220, 226, 233);
+    border-bottom: 1px solid var(--border-color);
 }
 
 nav a {
@@ -184,7 +184,7 @@ main {
     padding: clamp(20px, 3vw, 36px);
     background-color: var(--bg-card);
     color: var(--text-main);
-    border: 1px solid rgb(220, 226, 233);
+    border: 1px solid var(--border-color);
     border-radius: 20px;
 }
 
@@ -262,14 +262,14 @@ main {
 .contato {
     margin-top: 24px;
     padding: clamp(20px, 3vw, 36px);
-    background-color: rgb(250, 225, 233);
-    border: 1px solid rgb(220, 180, 195);
+    background-color: var(--accent-pink-bg);
+    border: 1px solid var(--accent-pink-border);
     border-radius: 20px;
 }
 
 .contato h2 {
     margin: 0 0 18px;
-    color: rgb(135, 43, 76);
+    color: var(--accent-pink-text);
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(24px, 3vw, 32px);
     line-height: 1.4;
@@ -277,7 +277,7 @@ main {
 
 .contato p {
     margin: 0 0 14px;
-    color: rgb(65, 48, 57);
+    color: var(--accent-pink-muted);
     font-size: 16px;
     line-height: 1.4;
 }
