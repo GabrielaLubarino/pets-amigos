@@ -3,10 +3,31 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: rgb(31, 62, 96);
+    --secondary-color: rgb(48, 91, 140);
+    --bg-footer: rgb(20, 42, 66);
+    --bg-neutral: rgb(242, 246, 251);
+    --bg-card: rgb(255, 255, 255);
+    --text-main: rgb(35, 48, 63);
+    --text-light: rgb(255, 255, 255);
+    --accent-color: rgb(255, 230, 140);
+    --focus-color: rgb(255, 190, 50);
+    --accent-pink-bg: rgb(250, 225, 233);
+    --accent-pink-border: rgb(220, 180, 195);
+    --accent-pink-text: rgb(135, 43, 76);
+    --accent-pink-muted: rgb(65, 48, 57);
+    --border-color: rgb(220, 226, 233);
+    --bg-hover:rgb(222, 235, 248);
+    --border-input: rgb(190, 202, 215);
+    --border-fieldset: rgb(190, 210, 230);
+    --placeholder-color: rgb(110, 122, 135);
+}
+
 body {
     margin: 0;
-    background-color: rgb(242, 246, 251);
-    color: rgb(35, 48, 63);
+    background-color: var(--bg-neutral);
+    color: var(--text-main);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.6;
@@ -20,8 +41,8 @@ body {
     padding: 10px 16px;
     transform: translateY(-160%);
     border-radius: 8px;
-    background-color: rgb(255, 230, 140);
-    color: rgb(35, 48, 63);
+    background-color: var(--accent-color);
+    color: var(--text-main);
     font-weight: 700;
     text-decoration: none;
 }
@@ -32,8 +53,8 @@ body {
 
 header {
     padding: 10px 20px;
-    background-color: rgb(31, 62, 96);
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-light);
     text-align: center;
 }
 
@@ -50,8 +71,8 @@ nav {
     flex-wrap: wrap;
     gap: 6px;
     padding: 8px 20px;
-    background-color: white;
-    border-bottom: 1px solid rgb(220, 226, 233);
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
 }
 
 nav a {
@@ -61,15 +82,15 @@ nav a {
     min-height: 44px;
     padding: 8px 14px;
     border-radius: 999px;
-    color: rgb(35, 48, 63);
+    color: var(--text-main);
     font-weight: 700;
     text-decoration: none;
     text-align: center;
 }
 
 nav a:hover {
-    background-color: rgb(222, 235, 248);
-    color: rgb(31, 62, 96);
+    background-color: var(--bg-hover);
+    color: var(--primary-color);
 }
 
 /* Botão Quero ajudar */
@@ -77,16 +98,16 @@ nav a:hover {
 nav a.botaoAjudar {
     margin-left: auto;
     padding: 10px 20px;
-    border: 2px solid rgb(31, 62, 96);
+    border: 2px solid var(--primary-color);
     border-radius: 999px;
-    background-color: rgb(31, 62, 96);
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-light);
 }
 
 nav a.botaoAjudar:hover {
-    background-color: rgb(48, 91, 140);
-    border-color: rgb(48, 91, 140);
-    color: white;
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--text-light);
 }
 
 /* acesibilidade: destacar os elementos quando a pessoa navega pelo site usando o teclado,*/
@@ -96,7 +117,7 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-    outline: 3px solid rgb(255, 190, 50);
+    outline: 3px solid var(--focus-color);
     outline-offset: 4px;
 }
 
@@ -114,14 +135,14 @@ textarea:focus-visible {
     gap: 10px;
     margin-bottom: 28px;
     padding: 32px;
-    background-color: rgb(31, 62, 96);
+    background-color: var(--primary-color);
     border-radius: 20px;
-    color: white;
+    color: var(--text-light);
 }
 
 .introducaoCadastro .destaque {
     margin: 0;
-    color: rgb(255, 230, 140);
+    color: var(--accent-color);
     font-size: 14px;
     font-weight: 800;
     letter-spacing: 1px;
@@ -130,7 +151,7 @@ textarea:focus-visible {
 
 .introducaoCadastro h1 {
     margin: 0;
-    color: white;
+    color: var(--text-light);
     font-family: Georgia, "Times New Roman", serif;
     font-size: 32px;
     line-height: 1.3;
@@ -139,7 +160,7 @@ textarea:focus-visible {
 .introducaoCadastro p {
     max-width: 800px;
     margin: 0;
-    color: white;
+    color: var(--text-light);
 }
 
 /* colunas */
@@ -156,8 +177,8 @@ textarea:focus-visible {
 .formulario-cadastro {
     min-width: 0;
     padding: 24px;
-    background-color: white;
-    border: 1px solid rgb(220, 226, 233);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(48, 91, 140, 0.08);
 }
@@ -177,15 +198,15 @@ textarea:focus-visible {
     min-width: 0;
     margin: 0;
     padding: 18px;
-    border: 1px solid rgb(190, 210, 230);
+    border: 1px solid var(--border-fieldset);
     border-radius: 14px;
-    background-color: rgb(242, 246, 251);
+    background-color: var(--bg-neutral);
 }
 
 .formulario-cadastro legend {
     max-width: 100%;
     padding: 0 8px;
-    color: rgb(48, 91, 140);
+    color: var(--secondary-color);
     font-family: Georgia, "Times New Roman", serif;
     font-size: 19px;
     font-weight: 700;
@@ -204,7 +225,7 @@ textarea:focus-visible {
 /* Rótulos */
 
 .formulario-cadastro label {
-    color: rgb(35, 48, 63);
+    color: var(--text-main);
     font-size: 14px;
     font-weight: 700;
 }
@@ -218,10 +239,10 @@ textarea:focus-visible {
     min-width: 0;
     min-height: 44px;
     padding: 10px 12px;
-    border: 1px solid rgb(190, 202, 215);
+    border: 1px solid var(--border-input);
     border-radius: 8px;
-    background-color: white;
-    color: rgb(35, 48, 63);
+    background-color: var(--bg-card);
+    color: var(--text-main);
     font: inherit;
     font-size: 14px;
 }
@@ -230,7 +251,7 @@ textarea:focus-visible {
 
 .formulario-cadastro input::placeholder,
 .formulario-cadastro textarea::placeholder {
-    color: rgb(110, 122, 135);
+    color: var(--placeholder-color);
 }
 
 /* Destaque ao passar o mouse */
@@ -238,7 +259,7 @@ textarea:focus-visible {
 .formulario-cadastro input:hover,
 .formulario-cadastro select:hover,
 .formulario-cadastro textarea:hover {
-    border-color: rgb(48, 91, 140);
+    border-color: var(--secondary-color);
 }
 
 /* Campo de mensagem */
@@ -267,7 +288,7 @@ textarea:focus-visible {
     width: 20px;
     min-height: 20px;
     margin: 3px 0 0;
-    accent-color: rgb(31, 62, 96);
+    accent-color: var(--primary-color);
 }
 
 /* Botão de envio */
@@ -276,17 +297,17 @@ textarea:focus-visible {
     align-self: flex-start;
     min-height: 48px;
     padding: 12px 28px;
-    border: 2px solid rgb(31, 62, 96);
+    border: 2px solid var(--primary-color);
     border-radius: 999px;
-    background-color: rgb(31, 62, 96);
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-light);
     font: inherit;
     font-weight: 700;
 }
 
 .formulario-cadastro button:hover {
-    background-color: rgb(48, 91, 140);
-    border-color: rgb(48, 91, 140);
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
 
 /* Coluna imagem, importancia, voluntarios*/
@@ -303,9 +324,9 @@ textarea:focus-visible {
 .imagem-filhotes {
     width: 100%;
     overflow: hidden;
-    background-color: white;
+    background-color: var(--bg-card);
     border-radius: 16px;
-    border: 1px solid rgb(220, 226, 233);
+    border: 1px solid var(--border-color);
 }
 
 .imagem-filhotes img {
@@ -328,7 +349,7 @@ textarea:focus-visible {
 
 .mensagemVoluntariado h2 {
     margin: 0;
-    color: rgb(31, 62, 96);
+    color: var(--primary-color);
     font-family: Georgia, "Times New Roman", serif;
     font-size: 25px;
     line-height: 1.3;
@@ -336,7 +357,7 @@ textarea:focus-visible {
 
 .mensagemVoluntariado p {
     margin: 0;
-    color: rgb(35, 48, 63);
+    color: var(--text-main);
 }
 
 /* Sessão certificados*/
@@ -346,8 +367,8 @@ textarea:focus-visible {
     flex-direction: column;
     gap: 14px;
     padding: 24px;
-    background-color: rgb(250, 225, 233);
-    border: 1px solid rgb(220, 180, 195);
+    background-color: var(--accent-pink-bg);
+    border: 1px solid var(--accent-pink-border);
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(135, 43, 76, 0.08);
 }
