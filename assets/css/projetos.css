@@ -30,6 +30,16 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.7;
+    /* Novas propriedades do Grid abaixo */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Faz os elementos principais ocuparem todas as 12 colunas */
+.pularConteudo, header, nav, main, footer {
+    grid-column: 1 / -1;
 }
 
 .pularConteudo {
