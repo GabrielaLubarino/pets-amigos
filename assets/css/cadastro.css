@@ -482,6 +482,20 @@ textarea:focus-visible {
     outline-offset: 4px;
 } /*Navegar pelo teclado*/
 
+button:disabled, .btn-card:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: var(--text-muted);
+}.formulario-cadastro input:not(:placeholder-shown):valid {
+    border-color: rgb(92, 184, 92); /* Verde */
+}
+
+.formulario-cadastro input:not(:placeholder-shown):valid {
+    border-color: rgb(92, 184, 92); /* Verde */
+}
+.formulario-cadastro input:not(:placeholder-shown):invalid {
+    border-color: rgb(217, 83, 79); /* Vermelho */
+}
 
 @media (max-width: 1200px) {
     #conteudo-principal {
