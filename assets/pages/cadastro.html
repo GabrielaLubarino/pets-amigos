@@ -13,11 +13,26 @@
 <script>
     const formulario = document.querySelector('.formulario-cadastro form');
     const botaoEnviar = document.getElementById('btn-enviar');
+    const toast = document.querySelector('.toast-feedback');
 
     formulario.addEventListener('input', () => {
         // .checkValidity() retorna true se todos os campos obrigatórios estiverem corretos, baseado no required, minlength, maxlength e pattern
         botaoEnviar.disabled = !formulario.checkValidity();
     });
+
+    formulario.addEventListener('submit', (evento) => {
+        evento.preventDefault(); // Evita que a página faça refresh
+        
+        toast.classList.add('mostrar'); // Faz o toast deslizar para cima
+
+        // Esconde o toast após 3 segundos (3000 milissegundos)
+        setTimeout(() => {
+            toast.classList.remove('mostrar');
+            formulario.reset();
+            botaoEnviar.disabled = true;
+            }, 3000);
+    });
+    
 </script>
 
 <body>
