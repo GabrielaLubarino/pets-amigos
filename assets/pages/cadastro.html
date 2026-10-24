@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="/assets/css/cadastro.css">
 </head>
 
+<script>
+    const formulario = document.querySelector('.formulario-cadastro form');
+    const botaoEnviar = document.getElementById('btn-enviar');
+
+    formulario.addEventListener('input', () => {
+        // .checkValidity() retorna true se todos os campos obrigatórios estiverem corretos, baseado no required, minlength, maxlength e pattern
+        botaoEnviar.disabled = !formulario.checkValidity();
+    });
+</script>
+
 <body>
     <a class="pularConteudo" href="#conteudo-principal">Pular para o conteúdo principal</a>
     
