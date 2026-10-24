@@ -30,8 +30,15 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.6;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
 }
-    
+
+.pularConteudo, header, nav, main, footer {
+    grid-column: 1 / -1;
+}
 
 .pularConteudo {
     position: absolute;
@@ -71,17 +78,49 @@ header p {
 /* navbar*/
 
 nav {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 8px 24px;
+    position: relative;
     background-color: var(--bg-card);
     border-bottom: 1px solid var(--border-color);
+    padding: 8px 24px;
 }
 
-nav a {
+.menu-checkbox {
+    display: none;
+}
+
+.menu-hamburguer {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+    margin: 8px 0;
+}
+
+.menu-hamburguer .barra {
+    height: 3px;
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.menu-lista {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 8px;
+    width: 100%;
+}
+
+.menu-lista li {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-lista a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,32 +130,24 @@ nav a {
     color: var(--text-main);
     font-size: 16px;
     font-weight: 700;
-    line-height: 1.4;
     text-decoration: none;
-    text-align: center;
 }
 
-nav a:hover {
+.menu-lista a:hover {
     background-color: var(--bg-soft-blue);
     color: var(--primary-color);
 }
 
-/* Botão Quero ajudar */
+.item-ajudar {
+    margin-left: auto;
+}
 
 nav a.botaoAjudar {
-    margin-left: auto;
-    min-height: 44px;
     padding: 8px 24px;
     border: 2px solid var(--primary-color);
     border-radius: 999px;
     background-color: var(--primary-color);
     color: var(--text-light);
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.4;
-    white-space: normal;
-    text-decoration: none;
-    transition: background-color 0.2s;
 }
 
 nav a.botaoAjudar:hover {
@@ -125,6 +156,39 @@ nav a.botaoAjudar:hover {
     color: var(--text-light);
 }
 
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+    z-index: 100;
+}
+
+.submenu a {
+    border-radius: 0;
+    justify-content: flex-start;
+    padding: 10px 18px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.dropdown:hover .submenu,
+.dropdown:focus-within .submenu {
+    display: block;
+}
 main {
     width: 90%;
     max-width: 1160px;

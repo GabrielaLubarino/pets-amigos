@@ -16,13 +16,34 @@
         <p>Projeto fictício -  Gabriela S Lubarino</p>
     </header>
 
-    <nav aria-label="Navegação principal">
-    <a href="index.html">Início</a>
-    <a href="assets/pages/projetos.html">Projetos</a>
-    <a href="assets/pages/cadastro.html">Cadastro</a>
-    <a href="assets/pages/cadastro.html" class="botaoAjudar">Quero ajudar</a>
-    </nav>
+   <nav aria-label="Navegação principal">
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox" aria-label="Alternar menu de navegação">
+        <label for="menu-toggle" class="menu-hamburguer" aria-label="Abrir menu">
+            <span class="barra"></span>
+            <span class="barra"></span>
+            <span class="barra"></span>
+        </label>
 
+        <ul class="menu-lista">
+            <li><a href="index.html" aria-current="page">Início</a></li>
+            <li class="dropdown">
+                <a href="assets/pages/projetos.html" class="dropdown-link">
+                    Projetos <span class="seta">▾</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="assets/pages/projetos.html#resgate">Resgate Animal</a></li>
+                    <li><a href="assets/pages/projetos.html#veterinario">Cuidados Veterinários</a></li>
+                    <li><a href="assets/pages/projetos.html#adocao">Adoção Responsável</a></li>
+                    <li><a href="assets/pages/projetos.html#lar-temporario">Lar Temporário</a></li>
+                </ul>
+            </li>
+            <li><a href="assets/pages/cadastro.html">Cadastro</a></li>
+            <li class="item-ajudar">
+                <a href="assets/pages/cadastro.html" class="botaoAjudar">Quero ajudar</a>
+            </li>
+        </ul>
+    </nav>
+    
     <main id="conteudo-principal">
 
         <section class="bem-vindo">

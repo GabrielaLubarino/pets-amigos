@@ -392,3 +392,57 @@ textarea:focus-visible {
     outline: 3px solid var(--focus-color);
     outline-offset: 4px;
 } /*Navegar pelo teclado*/
+
+@media (max-width: 1200px) {
+    main {
+        width: 95%;
+    }
+}
+@media (max-width: 992px) {
+    .listaEtapas {
+        grid-template-columns: repeat(2, 1fr); /* Reduz de 3 colunas para 2 */git 
+    }
+}
+
+@media (max-width: 768px) {
+    .listaProjetos,
+    .listaEtapas,
+    .apoioProjetos {
+        grid-template-columns: 1fr; /* Coloca os cartões de projetos e apoio numa única coluna */
+    }
+
+    nav a.botaoAjudar {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a {
+        width: 100%;
+    }
+
+    .introducaoProjetos,
+    .etapasProjeto,
+    .cartaoProjeto,
+    .cartaoApoio {
+        padding: 20px 16px;
+    }
+
+    .linkAcao {
+        width: 100%;
+    }
+}
+@media (max-width: 320px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+}
