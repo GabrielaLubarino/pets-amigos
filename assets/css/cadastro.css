@@ -421,3 +421,60 @@ textarea:focus-visible {
     outline: 3px solid var(--focus-color);
     outline-offset: 4px;
 } /*Navegar pelo teclado*/
+
+
+@media (max-width: 1200px) {
+    #conteudo-principal {
+        width: 95%;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .layoutCadastro {
+        grid-template-columns: 1fr; /* Transforma as 2 colunas forms numa só */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .introducaoCadastro {
+        padding: 20px;
+    }
+
+    nav a.botaoAjudar {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 576px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a {
+        width: 100%;
+    }
+
+    .formulario-cadastro {
+        padding: 16px;
+    }
+
+    .formulario-cadastro button {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .introducaoCadastro h1 {
+        font-size: 22px;
+    }
+
+    .formulario-cadastro legend {
+        font-size: 16px;
+    }
+}

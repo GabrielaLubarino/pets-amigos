@@ -328,3 +328,76 @@ textarea:focus-visible {
     outline: 3px solid var(--focus-color);
     outline-offset: 4px;
 } /*Navegar pelo teclado*/
+
+
+/*Media*/
+@media (max-width: 1200px) {
+    main {
+        width: 95%;
+    }
+}
+
+@media (max-width: 992px) {
+    .bem-vindo h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sectionQuemSomos,
+    .sectionHistoria {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagemSecao {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav a.botaoAjudar {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    header p {
+        font-size: 14px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a {
+        width: 100%;
+    }
+
+    .bem-vindo,
+    .estilo,
+    .sobre,
+    .contato {
+        padding: 20px 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        font-size: 14px;
+    }
+
+    .bem-vindo h1 {
+        font-size: 24px;
+    }
+
+    .pularConteudo {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
