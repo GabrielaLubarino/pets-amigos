@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -17,13 +18,12 @@
     --accent-pink-text: rgb(135, 43, 76);
     --accent-pink-muted: rgb(65, 48, 57);
     --border-color: rgb(220, 226, 233);
-    --bg-hover: rgb(222, 235, 248);
+    --bg-hover:rgb(222, 235, 248);
     --border-input: rgb(190, 202, 215);
     --border-fieldset: rgb(190, 210, 230);
     --placeholder-color: rgb(110, 122, 135);
 }
 
-/* --- ESTRUTURA MACRO (CSS GRID 12 COLUNAS) --- */
 body {
     margin: 0;
     background-color: var(--bg-neutral);
@@ -31,14 +31,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto auto 1fr auto;
-    min-height: 100vh;
-}
-
-.pularConteudo, header, nav, #conteudo-principal, footer {
-    grid-column: 1 / -1;
 }
 
 .pularConteudo {
@@ -71,51 +63,19 @@ header p {
     font-weight: 700;
 }
 
-/* --- NAVEGAÇÃO, FLEXBOX, DROPDOWN & HAMBÚRGUER --- */
+
+/* Reaproveitado tbm*/
 nav {
-    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
     padding: 8px 24px;
     background-color: var(--bg-card);
     border-bottom: 1px solid var(--border-color);
 }
 
-.menu-checkbox {
-    display: none;
-}
-
-.menu-hamburguer {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 28px;
-    height: 20px;
-    cursor: pointer;
-    margin: 8px 0;
-}
-
-.menu-hamburguer .barra {
-    height: 3px;
-    width: 100%;
-    background-color: var(--primary-color);
-    border-radius: 2px;
-}
-
-.menu-lista {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 8px;
-    width: 100%;
-}
-
-.menu-lista li {
-    margin: 0;
-    padding: 0;
-}
-
-.menu-lista a {
+nav a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,70 +85,33 @@ nav {
     color: var(--text-main);
     font-weight: 700;
     text-decoration: none;
+    text-align: center;
 }
 
-.menu-lista a:hover {
+nav a:hover {
     background-color: var(--bg-hover);
     color: var(--primary-color);
 }
 
-.item-ajudar {
-    margin-left: auto;
+
+/* acesibilidade: destacar os elementos quando a pessoa navega pelo site usando o teclado,*/
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--focus-color);
+    outline-offset: 4px;
 }
 
-nav a.botaoAjudar {
-    padding: 8px 24px;
-    border: 2px solid var(--primary-color);
-    border-radius: 999px;
-    background-color: var(--primary-color);
-    color: var(--text-light);
-}
 
-nav a.botaoAjudar:hover {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
-}
-
-/* Dropdown */
-.dropdown {
-    position: relative;
-}
-
-.submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 220px;
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    list-style: none;
-    padding: 8px 0;
-    margin: 0;
-    z-index: 100;
-}
-
-.submenu a {
-    border-radius: 0;
-    justify-content: flex-start;
-    padding: 10px 18px;
-    font-weight: 400;
-    font-size: 14px;
-}
-
-.dropdown:hover .submenu,
-.dropdown:focus-within .submenu {
-    display: block;
-}
-
-/* --- CONTEÚDO DO FORMULÁRIO (GRID 8 + 4 COLUNAS) --- */
 #conteudo-principal {
     width: 90%;
     max-width: 1160px;
     margin: 32px auto;
 }
+
 
 .introducaoCadastro {
     display: flex;
@@ -218,15 +141,24 @@ nav a.botaoAjudar:hover {
     line-height: 1.3;
 }
 
+.introducaoCadastro p {
+    max-width: 800px;
+    margin: 0;
+    color: var(--text-light);
+}
+
+/* colunas */
+
 .layoutCadastro {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
     align-items: start;
     gap: 32px;
 }
 
+/* card */
+
 .formulario-cadastro {
-    grid-column: span 8;
     min-width: 0;
     padding: 24px;
     background-color: var(--bg-card);
@@ -235,36 +167,37 @@ nav a.botaoAjudar:hover {
     box-shadow: 0 10px 30px rgba(48, 91, 140, 0.08);
 }
 
-.colunaInformativa {
-    grid-column: span 4;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    min-width: 0;
-}
-
 .formulario-cadastro form {
     display: flex;
     flex-direction: column;
     gap: 24px;
     width: 100%;
+    min-width: 0;
+    margin: 0;
 }
 
+/* Grupos do formulário */
+
 .formulario-cadastro fieldset {
+    min-width: 0;
+    margin: 0;
     padding: 16px;
     border: 1px solid var(--border-fieldset);
     border-radius: 14px;
     background-color: var(--bg-neutral);
-    margin: 0;
 }
 
 .formulario-cadastro legend {
+    max-width: 100%;
     padding: 0 8px;
     color: var(--secondary-color);
     font-family: Georgia, "Times New Roman", serif;
     font-size: 19px;
     font-weight: 700;
+    line-height: 1.3;
 }
+
+/* Espaçamento entre os campos */
 
 .formulario-cadastro fieldset p {
     display: flex;
@@ -273,42 +206,76 @@ nav a.botaoAjudar:hover {
     margin: 0 0 16px;
 }
 
+/* Rótulos */
+
 .formulario-cadastro label {
+    color: var(--text-main);
     font-size: 14px;
     font-weight: 700;
 }
+
+/* Campos de preenchimento */
 
 .formulario-cadastro input,
 .formulario-cadastro select,
 .formulario-cadastro textarea {
     width: 100%;
+    min-width: 0;
     min-height: 44px;
     padding: 8px 16px;
     border: 1px solid var(--border-input);
     border-radius: 8px;
     background-color: var(--bg-card);
+    color: var(--text-main);
     font: inherit;
     font-size: 14px;
 }
+
+/* Texto de exemplo dos campos */
+
+.formulario-cadastro input::placeholder,
+.formulario-cadastro textarea::placeholder {
+    color: var(--placeholder-color);
+}
+
+/* Destaque ao passar o mouse */
+
+.formulario-cadastro input:hover,
+.formulario-cadastro select:hover,
+.formulario-cadastro textarea:hover {
+    border-color: var(--secondary-color);
+}
+
+/* Campo de mensagem */
 
 .formulario-cadastro textarea {
     min-height: 120px;
     resize: vertical;
 }
 
+/* Confirmação */
+
 .formulario-cadastro .confirmacao {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 8px;
+    margin-bottom: 0;
+}
+
+.formulario-cadastro .confirmacao label {
+    font-weight: 400;
 }
 
 .formulario-cadastro input[type="checkbox"] {
     flex: 0 0 20px;
     width: 20px;
     min-height: 20px;
-    margin-top: 3px;
+    margin: 3px 0 0;
+    accent-color: var(--primary-color);
 }
+
+/* Botão de envio */
 
 .formulario-cadastro button {
     align-self: flex-start;
@@ -318,14 +285,25 @@ nav a.botaoAjudar:hover {
     border-radius: 999px;
     background-color: var(--primary-color);
     color: var(--text-light);
+    font: inherit;
     font-weight: 700;
-    cursor: pointer;
 }
 
 .formulario-cadastro button:hover {
     background-color: var(--secondary-color);
     border-color: var(--secondary-color);
 }
+
+/* Coluna imagem, importancia, voluntarios*/
+
+.colunaInformativa {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 0;
+}
+
+/* Imagem dos filhotes */
 
 .imagem-filhotes {
     width: 100%;
@@ -341,27 +319,115 @@ nav a.botaoAjudar:hover {
     height: auto;
 }
 
-.mensagemVoluntariado, .reconhecimento {
+/* voluntariado */
+
+.mensagemVoluntariado {
     display: flex;
     flex-direction: column;
     gap: 16px;
     padding: 24px;
+    background-color: rgb(255, 246, 210);
+    border: 1px solid rgb(238, 218, 151);
     border-radius: 16px;
 }
 
-.mensagemVoluntariado {
-    background-color: rgb(255, 246, 210);
-    border: 1px solid rgb(238, 218, 151);
+.mensagemVoluntariado h2 {
+    margin: 0;
+    color: var(--primary-color);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    line-height: 1.3;
 }
 
+.mensagemVoluntariado p {
+    margin: 0;
+    color: var(--text-main);
+}
+
+/* Sessão certificados*/
+
 .reconhecimento {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
     background-color: var(--accent-pink-bg);
     border: 1px solid var(--accent-pink-border);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(135, 43, 76, 0.08);
+}
+
+.reconhecimento h2 {
+    margin: 0;
+    color: var(--accent-pink-text);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+.reconhecimento p {
+    margin: 0;
+    color: var(--accent-pink-muted);
 }
 
 .reconhecimento img {
+    display: block;
     width: 100%;
+    height: auto;
     border-radius: 12px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+.badge.urgente {
+    background-color: var(--accent-pink-bg);
+    color: var(--accent-pink-text);
+}
+
+.badge.saude {
+    background-color: var(--bg-soft-blue);
+    color: var(--primary-color);
+}
+
+.badge.familia {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.badge.voluntariado {
+    background-color: var(--accent-color);
+    color: var(--text-main);
+}
+
+.btn-card {
+    display: inline-block;
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-card:hover, 
+.btn-card:focus-visible {
+    background-color: var(--secondary-color);
+}
+
+.btn-card:active {
+    transform: scale(0.98);
 }
 
 footer {
@@ -371,81 +437,96 @@ footer {
     color: var(--text-light);
     text-align: center;
 }
-
-footer nav {
-    background-color: transparent;
-    border: 0;
+footer p {
+    margin: 0 0 18px;
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 1.4;
 }
 
-footer nav .menu-lista {
+footer nav {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    background-color: transparent;
+    border: 0;
+    padding: 16px 0;
 }
 
 footer nav a {
+    min-height: 44px;
+    padding: 8px 16px;
     color: var(--focus-color);
+    font-size: 15px;
 }
 
-a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+footer nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
     outline: 3px solid var(--focus-color);
     outline-offset: 4px;
+} /*Navegar pelo teclado*/
+
+
+@media (max-width: 1200px) {
+    #conteudo-principal {
+        width: 95%;
+    }
 }
 
-/* --- 5 BREAKPOINTS DE MEDIAS --- */
-@media (max-width: 1200px) {
-    #conteudo-principal { width: 95%; }
-}
 
 @media (max-width: 992px) {
-    .formulario-cadastro,
-    .colunaInformativa {
-        grid-column: span 12;
+    .layoutCadastro {
+        grid-template-columns: 1fr; /* Transforma as 2 colunas do formulário/lateral numa só */
     }
 }
 
+
 @media (max-width: 768px) {
-    .menu-hamburguer {
-        display: flex;
+    .introducaoCadastro {
+        padding: 20px;
     }
 
-    .menu-lista {
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-        margin-top: 12px;
-        gap: 4px;
-    }
-
-    .menu-checkbox:checked ~ .menu-lista {
-        display: flex;
-    }
-
-    .item-ajudar {
+    nav a.botaoAjudar {
         margin-left: 0;
         width: 100%;
     }
+}
 
-    .menu-lista a {
-        justify-content: flex-start;
+
+@media (max-width: 576px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a {
         width: 100%;
     }
 
-    .submenu {
-        position: static;
-        box-shadow: none;
-        border: none;
-        background-color: var(--bg-neutral);
-        padding-left: 16px;
+    .formulario-cadastro {
+        padding: 16px;
+    }
+
+    .formulario-cadastro button {
+        width: 100%;
     }
 }
 
-@media (max-width: 576px) {
-    .introducaoCadastro { padding: 20px; }
-    .formulario-cadastro { padding: 16px; }
-    .formulario-cadastro button { width: 100%; }
-}
 
 @media (max-width: 320px) {
-    .introducaoCadastro h1 { font-size: 22px; }
-    .formulario-cadastro legend { font-size: 16px; }
+    .introducaoCadastro h1 {
+        font-size: 22px;
+    }
+
+    .formulario-cadastro legend {
+        font-size: 16px;
+    }
 }
